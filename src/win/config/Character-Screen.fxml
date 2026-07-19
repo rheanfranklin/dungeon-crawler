@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#buildController" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: darkgrey;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.Controller">
+   <left>
+      <VBox alignment="CENTER" prefHeight="171.0" prefWidth="145.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="101.0" prefWidth="110.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="diffEasy" mnemonicParsing="false" onAction="#difficultySelectEasy" prefHeight="17.0" prefWidth="53.0" text="Easy">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="diffNormal" mnemonicParsing="false" onAction="#difficultySelectNormal" text="Normal">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="diffInsane" mnemonicParsing="false" onAction="#difficultySelectInsane" text="Insane">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="80.0" left="7.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="222.0" prefWidth="145.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weapon">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <ComboBox fx:id="weaponSelection" onMouseClicked="#weaponSelect" prefHeight="25.0" prefWidth="117.0">
+               <VBox.margin>
+                  <Insets bottom="66.0" />
+               </VBox.margin></ComboBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" textFill="#000000c5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="next" mnemonicParsing="false" onAction="#nextButtonClicked" text="Next" textFill="#000000c4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Your Traveller" wrappingWidth="378.02276611328125">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Box depth="100" height="100" layoutX="200.0" layoutY="181.0" width="100" AnchorPane.bottomAnchor="95.66666666666669" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="131.0" />
+                  <TextField fx:id="nameBox" alignment="CENTER" layoutX="84.0" layoutY="42.0" onKeyTyped="#nameEntered" prefHeight="25.0" prefWidth="231.0" promptText="Name">
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Text fx:id="warningText" fill="RED" layoutX="52.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.80335235595703">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
